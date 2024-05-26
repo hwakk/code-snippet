@@ -1,0 +1,9 @@
+.vscode
+.DS_Store
+_*.sass
+_*.scss
+_*.scssc
+*.map
+*.txt
+LICENSE
+*.md
