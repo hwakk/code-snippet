@@ -2,64 +2,64 @@
 const projects = [
   {
     id: "1",
-    name: "1300k",
+    name: "1300K",
     url: "//1300k.com/",
     image: "images/img_1.png",
     category: ["homepage", "website"],
   },
   {
     id: "2",
-    name: "OTT data crawling",
+    name: "OTT DATA CRAWLING",
     url: "#",
     image: "images/img_2.png",
     category: ["programming", "data"],
   },
   {
     id: "3",
-    name: "todaystory",
+    name: "TODAYSTORY",
     url: "//picks.my/ko_v2/index.html",
     image: "images/img_3.png",
     category: ["homepage", "website"],
   },
   {
     id: "4",
-    name: "orbitcode v1.0",
-    url: "//www.orbitcode.kr/",
+    name: "ORBITCODE V1.0",
+    url: "//www.orbitcode.co.kr/orbitcode/",
     image: "images/img_4.png",
     category: ["homepage", "website"],
   },
   {
     id: "5",
-    name: "orbitcode v1.14",
-    url: "//www.orbitcode.kr/",
-    image: "images/sample_5.png",
+    name: "ORBITCODE V1.14",
+    url: "//www.orbitcode.kr",
+    image: "images/img_5.png",
     category: ["homepage", "website"],
   },
   {
     id: "6",
-    name: "website",
+    name: "WEBSITE",
     url: "//design81669.imweb.me/",
     image: "images/img_6.png",
-    category: ["homepage", "imweb website"],
+    category: ["homepage", " website"],
   },
   {
     id: "7",
-    name: "namari",
+    name: "NAMARI",
     url: "//www.orbitcode.co.kr/namari/",
     image: "images/img_7.png",
     category: ["homepage", "website"],
   },
   {
     id: "8",
-    name: "agency",
+    name: "AGENCY",
     url: "//www.orbitcode.co.kr/agency/",
     image: "images/img_8.png",
     category: ["homepage", "website"],
   },
   {
     id: "9",
-    name: "outdoors",
-    url: "http://www.orbitcode.co.kr/outdoors/",
+    name: "OUTDOORS",
+    url: "//www.orbitcode.co.kr/outdoors/",
     image: "images/img_9.png",
     category: ["homepage", "website"],
   },
@@ -84,6 +84,29 @@ jQuery(document).ready(function ($) {
         .clone()
         .attr("class", "site-nav-wrap")
         .appendTo(".site-mobile-menu-body");
+    });
+
+    // for test
+    const mobileMenu = document.querySelector(".site-nav-wrap");
+    projects.forEach((project) => {
+      const { name } = project;
+      const projectItem = document.createElement("li");
+      projectItem.classList.add("scroll-to-link");
+      projectItem.innerHTML = `
+        <a href="#${name}">
+          <span>${name}</span>
+        </a>
+      `;
+      mobileMenu.appendChild(projectItem);
+    });
+
+    const menuItems = mobileMenu.querySelectorAll("li.scroll-to-link > a");
+    menuItems.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        const target = document.getElementById(item.textContent.trim());
+        target.scrollIntoView({ behavior: "smooth" });
+        document.body.classList.remove("offcanvas-menu");
+      });
     });
 
     setTimeout(function () {
@@ -394,6 +417,7 @@ const getProjects = () => {
 
     const projectItem = document.createElement("div");
     projectItem.classList.add("col-lg-4");
+    projectItem.id = name;
     projectItem.dataset.key = id;
 
     projectItem.innerHTML = `

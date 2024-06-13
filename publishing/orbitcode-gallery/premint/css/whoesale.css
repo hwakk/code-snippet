@@ -1,0 +1,324 @@
+@import url('/premint/css/common/common.css');
+@import url('/premint/css/header.css');
+@import url('/premint/css/footer.css');
+
+header {
+  background-color: var(--color-sub);
+}
+
+.header__menu .menu__item > a {
+  color: var(--color-main);
+}
+
+main {
+  padding-top: 100px;
+}
+
+#whoesale {
+  display: block;
+  max-width: 1630px;
+  padding: 100px 15px 150px;
+  margin: 0 auto;
+}
+
+.whoesale__title {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.whoesale__title > h1 {
+  position: relative;
+  font-size: 24px;
+  color: var(--color-gray-100);
+}
+
+.whoesale__title > h1::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-image: url('/premint/images/sub_title_img.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: rotate 8s linear infinite;
+  -webkit-animation: rotate 8s linear infinite;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.whoesale__form {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.whoesale__form > p {
+  font-size: 16px;
+  color: var(--color-gray-300);
+  margin-bottom: 15px;
+}
+
+.required {
+  color: var(--color-main);
+}
+
+.form__text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.text__wrap {
+  flex: 1 0 48%;
+  width: 48%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border: 1px solid var(--color-gray-400);
+}
+
+.text__wrap.content {
+  flex-direction: column;
+  padding: 15px;
+}
+
+.text__wrap label {
+  width: 210px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-gray-300);
+  padding: 12px 15px 11px 15px;
+  border-right: 1px solid var(--color-gray-400);
+}
+
+.text__wrap.content label {
+  width: 100%;
+  border-right: none;
+  border-bottom: 1px solid var(--color-gray-400);
+  padding: 5px 0 20px;
+}
+
+.text__wrap input,
+.text__wrap select,
+.text__wrap textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  appearance: none;
+  color: var(--color-gray-300);
+}
+
+.text__wrap input,
+.text__wrap select {
+  padding: 0 15px;
+}
+
+.text__wrap input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.text__wrap textarea {
+  width: 100%;
+  min-height: 180px;
+  font-size: 14px;
+  padding: 10px;
+  resize: none;
+}
+
+.form__agreement {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-sub);
+  padding: 18px 20px 18px 15px;
+  margin-top: 50px;
+}
+
+.form__agreement .text__wrap {
+  flex: none;
+  width: auto;
+  border: none;
+  padding: 0;
+}
+
+.text__wrap .title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-gray-100);
+}
+
+.form__agreement button > a {
+  display: block;
+  width: 87px;
+  font-size: 13px;
+  color: var(--color-gray-300);
+  line-height: 31px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-600);
+  margin-left: 15px;
+}
+
+.button__wrap {
+  display: flex;
+  gap: 15px;
+}
+
+.form__agreement label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.form__agreement input {
+  position: relative;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-gray-400);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.form__agreement input[type='radio']:checked {
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+}
+
+.form__agreement input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+}
+
+.form__submit {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form__submit button {
+  width: 100%;
+  max-width: 470px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-main);
+  line-height: 1.6;
+  background-color: var(--color-sub);
+  border: 1px solid var(--color-main);
+  padding: 18px 0;
+
+  &:hover {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02), 0 4px 4px 0 rgba(0, 0, 0, 0.02), 0 10px 6px 0 rgba(0, 0, 0, 0.01), 0 18px 7px 0 rgba(0, 0, 0, 0.01), 0 28px 8px 0 rgba(0, 0, 0, 0.01), -4px -8px 17px 0 rgba(0, 0, 0, 0.03);
+  }
+}
+
+@media (max-width: 992px) {
+  main {
+    padding-top: 50px;
+  }
+
+  #whoesale {
+    padding: 30px 15px;
+  }
+
+  .whoesale__title {
+    padding: 10px 0 40px;
+  }
+
+  .whoesale__title > h1 {
+    font-size: 20px;
+  }
+
+  .whoesale__title > h1::after {
+    top: -25px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .form__text {
+    gap: 10px;
+  }
+
+  .text__wrap {
+    flex: 1 0 100%;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .text__wrap .title {
+    font-size: 16px;
+  }
+  
+  .text__wrap label {
+    width: 100%;
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid var(--color-gray-400);
+    padding: 10px 0 9px;
+  }
+
+  .text__wrap input,
+  .text__wrap select {
+    width: 100%;
+    /* height: 60px; */
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    padding: 10px 15px 9px 15px;
+  }
+
+  .text__wrap.content {
+    padding: 0 15px;
+  }
+
+  .text__wrap.content label {
+    padding: 10px 0 9px;
+  }
+
+  .whoesale__form > p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form__agreement {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .form__agreement .text__wrap {
+    flex-direction: row;
+  }
+
+  .form__agreement .text__wrap .title,
+  .form__agreement label {
+    font-size: 14px;
+  }
+
+  .form__agreement button > a {
+    width: 80px;
+    font-size: 11px;
+    line-height: 26px;
+    margin-left: 10px;
+  }
+
+  .button__wrap {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .form__submit {
+    margin-top: 30px;
+  }
+}

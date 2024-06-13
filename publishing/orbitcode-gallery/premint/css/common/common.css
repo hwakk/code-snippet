@@ -1,0 +1,121 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* normalize */
+@import url('/premint/css/common/normalize.css');
+
+/* color */
+@import url('/premint/css/common/color.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(163, 163, 163, 0.68);
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Libre Baskerville", serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+  -webkit-text-size-adjust: none;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+.fade-in {
+  position: relative;
+  top: 80px;
+  opacity: 0;
+}
+
+@keyframes pulseBgSlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    top: 80px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
